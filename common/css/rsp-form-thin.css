@@ -1,0 +1,161 @@
+#navcontainer {
+  padding: 4px 5px 5px 0;
+  text-align: right;
+  float: right;
+  width: 460px;
+}
+.subcontainer {
+  display:                 flex;
+  display:                 -webkit-flex; /* Safari 8 */
+  flex-wrap:               wrap;
+  -webkit-flex-wrap:       wrap;         /* Safari 8 */
+  justify-content:         center;
+  -webkit-justify-content: center;       /* Safari 8 */
+  padding: 25px 0 5px 0;
+}
+.submenu{
+   float: left;
+   margin: 3px;
+   padding: 0px;
+   width: 182px;
+   text-align: left;
+}
+.dataleft{
+   margin: 0 30px 0 0;
+   padding-bottom: 25px;
+   width: 70%;
+   text-align: left;
+}
+.dataright{
+   float: right;
+   margin: 0 20px;
+   padding-bottom: 5px;
+   width: 30%;
+   text-align: right;
+}
+form > div { 
+  clear: both;
+  text-align: left;
+  overflow: hidden;
+  padding: 1px;
+  padding-bottom: 5px;
+  margin: auto;
+  width: 600px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+  width: 20%;
+  float: left;
+  padding-right: 10px;
+  line-height: 1.2em;
+  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;      
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 80%;
+  float: right;
+}
+form > div > fieldset label {
+  line-height: 1.2em;
+  height: 12px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=search] {
+  text-indent: 0.5em
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+.flexbox { display: flex; }
+.flexbox .stretch { flex: 1; margin: 0 0 0 1em;}
+.flexbox .normal { flex: 0; margin: 0 1em 0 0em; }
+.flexbox div input { padding: .2em 0em; width: 220px; }
+.flexbox div button { padding: .2em .2em .2em 0; white-space: nowrap; }
+
+.noflexbox { display: flex; }
+.noflexbox .stretch { flex: 1; margin: 0;}
+.noflexbox .normal { flex: 0; margin: 0em; padding: 0.2em; vertical-align: bottom }
+.noflexbox div input { margin: 0.2em; }
+
+
+@media screen and (max-width: 599px) {
+  form > div {
+    margin: 0 0 15px 0; 
+    width: auto;
+  }
+  form > div > label,
+  legend {
+    width: 95%;
+    float: none;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 95%;
+    float: none;
+    padding-top: 2px;
+  }
+  input[type=text].exp,
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea {
+    width: 95%; 
+  }
+.dataleft{
+   clear: both;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 15px;   
+   
+}
+.dataright{
+   width: 100%;
+   text-align: center;
+   padding-bottom: 10px;
+   margin: 0.2em;
+}
+}
+@media (min-width: 1200px) {
+  form > div > label,
+	legend {
+  	text-align: right;
+        width: 33%;
+  }
+  form > div {
+    width: 95%;
+  }  
+    form > div > div,
+    form > div > fieldset > div {
+      width: 65%;
+    }
+}
