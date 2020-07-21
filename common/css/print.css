@@ -324,5 +324,5 @@ div.err{ border:solid 1px #CC0000; padding: 7px 4px 7px 4px; text-align:center; 
 .tm {font-size: 9px; font-weight: normal }
 
 table td {
-	font-size: 12px !important;
+	/* font-size: 12px !important; */
 }

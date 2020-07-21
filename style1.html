@@ -8,18 +8,18 @@
     <META name="description" content="ManagerSal.com Contract Manager!">
     <META name="keywords" lang="en-us" content="Contracts">
     <META name="copyright" content="&copy;2020 ManagerSal.com">
-    <SCRIPT type="text/javascript" language="JavaScript 1.2" src="/1_ux_server/common/js/jscripts_msp.js"></SCRIPT>
-    <script src="/1_ux_server/common/js/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="/1_ux_server/common/js/jquery-ui-1.12.1.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="/1_ux_server/common/js/jquery.ui.touch-punch.min.js"></script>
-    <link rel="stylesheet" href="/1_ux_server/common/css/jquery-ui.css" type="text/css" />
-    <script type="text/javascript" src="/1_ux_server/common/js/clipboard.min.js"></script>
-    <link rel="stylesheet" href="/1_ux_server/common/css/print.css" type="text/css" />
-    <link rel="stylesheet" media="print" href="/1_ux_server/common/css/print_on.css" type="text/css" />
+    <SCRIPT type="text/javascript" language="JavaScript 1.2" src="./common/js/jscripts_msp.js"></SCRIPT>
+    <script src="./common/js/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="./common/js/jquery-ui-1.12.1.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="./common/css/jquery-ui.css" type="text/css" />
+    <script type="text/javascript" src="./common/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="./common/css/print.css" type="text/css" />
+    <link rel="stylesheet" media="print" href="./common/css/print_on.css" type="text/css" />
     <LINK rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="/1_ux_server/common/css/rsp-form-thin.css" />
+    <link type="text/css" rel="stylesheet" href="./common/css/rsp-form-thin.css" />
 
 </head>
 
@@ -134,8 +134,8 @@
                         <table width="95%" border="0" cellspacing="0" cellpadding="3">
                             <tr>
                                 <td align="center" valign="top" width="35%">
-                                    <img src="/1_ux_server/photos/download.jpg" alt="ManagerSal" title="ManagerSal"
-                                        border="0" /></td>
+                                    <img src="./photos/download.jpg" alt="ManagerSal" title="ManagerSal" border="0" />
+                                </td>
                                 <td valign="top" class="bold14" width="65%">
                                     <h1>ManagerSal</h1>
                                     <h2 style="padding-bottom:7px"><em>Contacts to Contracts for Entertainers!</em></h2>
@@ -346,7 +346,6 @@
         $(document).ready(function () {
             $("#btn_print").click(function () {
                 let data = $("#div_print").html();
-                console.log(data);
                 $.ajax({
                     url: "index.php",
                     type: "POST",

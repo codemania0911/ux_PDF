@@ -3,12 +3,13 @@
 if (isset($_POST['html'])) {
     require_once("vendor/autoload.php"); 
 
-    $html = $_POST['html'];    
+    $html = $_POST['html'];
+
     $mpdf = new \Mpdf\Mpdf([
         'mode' => 'c',
         'format' => 'A4',
-        'margin_left' => 15,
-        'margin_right' => 15,
+        'margin_left' => 25,
+        'margin_right' => 25,
         'margin_top' => 25,
         'margin_bottom' => 10,
         'margin_header' => 16,
@@ -16,10 +17,8 @@ if (isset($_POST['html'])) {
     ]);
 
     $mpdf->SetDisplayMode('fullpage');
-    $mpdf->shrink_tables_to_fit = 1;
-    // $mpdf->list_indent_first_level = 0; // 1 or 0 - whether to indent the first level of a list
-
-    // // Load a stylesheet
+    $mpdf->shrink_tables_to_fit = 0;
+    
     $stylesheet1 = file_get_contents('common/css/jquery-ui.css');
     $stylesheet2 = file_get_contents('common/css/print.css');
     $stylesheet3 = file_get_contents('common/css/print_on.css');
@@ -32,11 +31,12 @@ if (isset($_POST['html'])) {
 
     $mpdf->WriteHTML($html);
 
-    $mpdf->Output("test.pdf");
-
-    $result = ["success" => "true"];
+    $fileName = (new \DateTime())->format('Y-m-d H-i-s') . '.pdf';
+    $mpdf->Output($fileName);
+    
+    $result = ["success" => $fileName];
     echo json_encode($result);
 } else {
-    $result = ["success" => "false"];
+    $result = ["success" => "parameter failed"];
     echo json_encode($result);
 }
